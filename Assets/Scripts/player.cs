@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class player : MonoBehaviour {
+public class Player : MonoBehaviour {
 
+    public event Action onPlayerDestroyed;
     float screenHalfWidth;
     float speed = 5;
 	// Use this for initialization
@@ -42,6 +44,8 @@ public class player : MonoBehaviour {
         if (triggerCollider.tag == "obstacleBlocks")
         {
             Destroy(gameObject);
+            if(onPlayerDestroyed != null)
+               onPlayerDestroyed();
         }
     }
 }

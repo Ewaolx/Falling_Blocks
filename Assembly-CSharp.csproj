@@ -59,8 +59,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\obstacle_spawn.cs" />
-    <Compile Include="Assets\Scripts\player.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
+    <Compile Include="Assets\Scripts\ObstacleSpawn.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/unitytutorials/FallingBlocks/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
