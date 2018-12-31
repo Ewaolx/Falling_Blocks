@@ -51,17 +51,13 @@ public class obstacle_spawn : MonoBehaviour {
             print("Lapped");
             timeDifficulty = Time.time;
             obstacleSpeed += 1;
-            spawnIntervalSec -= 0.1f;
-            maxObstacleSize += 0.1f;
+            spawnIntervalSec -= 0.3f;
+            maxObstacleSize += 0.7f;
         }
 
         GameObject obstacle;
         if (Time.time - time > spawnIntervalSec) //spawning obstacle every 1.5 seconds
         {
-            //print("height" + screenHalfHeight * 2);
-            //print("width" + screenHalfWidth * 2);
-            //print("angle:" + rotation.z);
-            //print("pos in world:" + position.x);
             obstacle = (GameObject)Instantiate(obstacle_prefab, position, Quaternion.Euler(rotation));
             time = Time.time;
             obstacle.transform.parent = transform;
