@@ -31,7 +31,7 @@ public class obstacle_spawn : MonoBehaviour {
         Vector2 position = new Vector2(Random.Range(-screenHalfWidth+1,screenHalfWidth-1), screenHalfHeight - 1);
         Vector3 rotation = new Vector3(0, 0, 0);
 
-        // Setting the angle so that it doesn't go out of screen in middle of falling
+        // Setting the angle so that it doesn't go out of screen in middle of screen
         if(position.x>0)
         {
             float angle1 = Mathf.Rad2Deg * Mathf.Atan2((screenHalfWidth) + position.x , screenHalfHeight * 2 );
@@ -51,8 +51,8 @@ public class obstacle_spawn : MonoBehaviour {
             print("Lapped");
             timeDifficulty = Time.time;
             obstacleSpeed += 1;
-            spawnIntervalSec -= 0.3f;
-            maxObstacleSize += 0.7f;
+            spawnIntervalSec -= 0.05f;
+            maxObstacleSize += 0.9f;
         }
 
         GameObject obstacle;
