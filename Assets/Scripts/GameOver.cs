@@ -32,6 +32,6 @@ public class GameOver : MonoBehaviour {
     {
         flag = 1;
         gameOverUI.SetActive(true);
-        seconds.text = Mathf.RoundToInt(Time.timeSinceLevelLoad).ToString();
+        seconds.text = Mathf.RoundToInt(Time.timeSinceLevelLoad).ToString();  // Seconnds from the start of the scene to be displayed, when player is destroyed
     }
 }

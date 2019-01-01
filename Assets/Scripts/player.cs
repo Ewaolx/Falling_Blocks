@@ -10,14 +10,12 @@ public class Player : MonoBehaviour {
     float speed = 5;
 	// Use this for initialization
 	void Start () {
-        //print("Screen :" + Screen.width);	
         screenHalfWidth = Camera.main.orthographicSize * Camera.main.aspect;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
-        // print("Output:"+input);
+         Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
          Vector3 dir = input.normalized;
          Vector3 vel = dir * speed;
          transform.Translate(vel*Time.deltaTime);

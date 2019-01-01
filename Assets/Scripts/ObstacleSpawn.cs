@@ -10,10 +10,10 @@ public class ObstacleSpawn: MonoBehaviour {
     float screenHalfHeight;
     float time;
     float timeDifficulty;
-    public float difficultyIncreaseSec  = 30;
-    public float obstacleSpeed = 3;
+    public float difficultyIncreaseSec  = 30;    
+    public float obstacleSpeed = 3;       //Speed at which obtacle blocks travel
     public float spawnIntervalSec = 0.8f; //Time interval between two consecutive spawns of obstacle blocks
-    public float minObstacleSize = 0.3f;
+    public float minObstacleSize = 0.3f;  
     public float maxObstacleSize = 0.5f;
     Player playerobject;
     // Use this for initialization
